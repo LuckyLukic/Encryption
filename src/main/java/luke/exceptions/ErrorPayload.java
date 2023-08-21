@@ -1,4 +1,4 @@
-package lucaguerra.exceptions;
+package luke.exceptions;
 
 import java.util.Date;
 

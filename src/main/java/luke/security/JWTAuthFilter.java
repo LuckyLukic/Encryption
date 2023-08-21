@@ -1,4 +1,4 @@
-package lucaguerra.security;
+package luke.security;
 
 import java.io.IOException;
 import java.util.UUID;
@@ -14,9 +14,9 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import lucaguerra.entities.User;
-import lucaguerra.exceptions.UnauthorizedException;
-import lucaguerra.service.UsersService;
+import luke.entities.User;
+import luke.exceptions.UnauthorizedException;
+import luke.service.UsersService;
 
 @Component
 public class JWTAuthFilter extends OncePerRequestFilter {

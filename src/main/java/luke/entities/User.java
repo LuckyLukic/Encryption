@@ -1,4 +1,4 @@
-package lucaguerra.entities;
+package luke.entities;
 
 import java.util.Collection;
 import java.util.List;
@@ -17,7 +17,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lucaguerra.Enum.Role;
+import luke.Enum.Role;
 
 @SuppressWarnings("serial")
 @Entity

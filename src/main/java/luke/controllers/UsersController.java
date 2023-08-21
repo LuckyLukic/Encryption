@@ -1,4 +1,4 @@
-package lucaguerra.controllers;
+package luke.controllers;
 
 import java.util.List;
 import java.util.UUID;
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import lucaguerra.entities.User;
-import lucaguerra.payload.NewUserPayload;
-import lucaguerra.service.UsersService;
+import luke.entities.User;
+import luke.payload.NewUserPayload;
+import luke.service.UsersService;
 
 @RestController
 @RequestMapping("/users")
@@ -28,7 +28,7 @@ public class UsersController {
 
 	@PostMapping("")
 	@ResponseStatus(HttpStatus.CREATED)
-	public User saveUser(@RequestBody lucaguerra.payload.NewUserPayload body) {
+	public User saveUser(@RequestBody luke.payload.NewUserPayload body) {
 		User createdUser = userService.save(body);
 		return createdUser;
 	}

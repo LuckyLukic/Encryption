@@ -1,4 +1,4 @@
-package lucaguerra.security;
+package luke.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

@@ -1,4 +1,4 @@
-package lucaguerra.security;
+package luke.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import lucaguerra.entities.User;
-import lucaguerra.exceptions.UnauthorizedException;
-import lucaguerra.payload.LoginSuccessfullPayload;
-import lucaguerra.payload.NewUserPayload;
-import lucaguerra.payload.UserLoginPayload;
-import lucaguerra.service.UsersService;
+import luke.entities.User;
+import luke.exceptions.UnauthorizedException;
+import luke.payload.LoginSuccessfullPayload;
+import luke.payload.NewUserPayload;
+import luke.payload.UserLoginPayload;
+import luke.service.UsersService;
 
 @RestController
 @RequestMapping("/auth")

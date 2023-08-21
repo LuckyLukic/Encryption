@@ -1,5 +1,6 @@
-package lucaguerra;
+package luke;
 
+import java.util.List;
 import java.util.Locale;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,19 +9,27 @@ import org.springframework.stereotype.Component;
 
 import com.github.javafaker.Faker;
 
-import lucaguerra.payload.NewUserPayload;
-import lucaguerra.service.UsersService;
+import luke.entities.User;
+import luke.payload.NewUserPayload;
+import luke.repositories.UserRepository;
+import luke.service.UsersService;
 
 @Component
 public class Runner implements CommandLineRunner {
 
 	@Autowired
 	UsersService userService;
+	
+	 @Autowired
+	    UserRepository utenteRepo;
 
 	@Override
 	public void run(String... args) throws Exception {
 
 		Faker faker = new Faker(new Locale("it"));
+		
+		 List<User> utentiDb = utenteRepo.findAll();
+	        if (utentiDb.isEmpty()) {
 
 		for (int i = 0; i < 10; i++) {
 			String username = faker.funnyName().name();
@@ -30,6 +39,8 @@ public class Runner implements CommandLineRunner {
 			String password = "1234";
 			NewUserPayload user = new NewUserPayload(username, name, surname, email, password);
 			userService.save(user);
+			
+		}
 		}
 
 	}

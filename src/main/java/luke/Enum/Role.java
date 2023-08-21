@@ -1,4 +1,4 @@
-package lucaguerra.Enum;
+package luke.Enum;
 
 public enum Role {
 

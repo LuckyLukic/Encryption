@@ -1,4 +1,4 @@
-package lucaguerra.payload;
+package luke.payload;
 
 import lombok.AllArgsConstructor;
 

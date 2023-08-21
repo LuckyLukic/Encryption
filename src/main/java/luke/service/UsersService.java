@@ -1,4 +1,4 @@
-package lucaguerra.service;
+package luke.service;
 
 import java.util.List;
 import java.util.UUID;
@@ -6,11 +6,11 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import lucaguerra.entities.User;
-import lucaguerra.exceptions.BadRequestException;
-import lucaguerra.exceptions.NotFoundException;
-import lucaguerra.payload.NewUserPayload;
-import lucaguerra.repositories.UserRepository;
+import luke.entities.User;
+import luke.exceptions.BadRequestException;
+import luke.exceptions.NotFoundException;
+import luke.payload.NewUserPayload;
+import luke.repositories.UserRepository;
 
 @Service
 public class UsersService {

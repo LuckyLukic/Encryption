@@ -1,4 +1,4 @@
-package lucaguerra.exceptions;
+package luke.exceptions;
 
 @SuppressWarnings("serial")
 public class BadRequestException extends RuntimeException {

@@ -1,4 +1,4 @@
-package lucaguerra.repositories;
+package luke.repositories;
 
 import java.util.Optional;
 import java.util.UUID;
@@ -6,7 +6,7 @@ import java.util.UUID;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import lucaguerra.entities.User;
+import luke.entities.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, UUID> {
