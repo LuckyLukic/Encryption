@@ -12,6 +12,7 @@ import com.github.javafaker.Faker;
 import luke.entities.User;
 import luke.payload.NewUserPayload;
 import luke.repositories.UserRepository;
+import luke.security.AuthController;
 import luke.service.UsersService;
 
 @Component
@@ -22,6 +23,9 @@ public class Runner implements CommandLineRunner {
 	
 	 @Autowired
 	    UserRepository utenteRepo;
+	 
+	 @Autowired
+	 AuthController authController;
 
 	@Override
 	public void run(String... args) throws Exception {
@@ -38,7 +42,7 @@ public class Runner implements CommandLineRunner {
 			String email = faker.internet().emailAddress();
 			String password = "1234";
 			NewUserPayload user = new NewUserPayload(username, name, surname, email, password);
-			userService.save(user);
+			authController.saveUser(user);
 			
 		}
 		}
